@@ -1,0 +1,260 @@
+@use 'mixins'
+@use 'variables'
+
+    
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Manrope', sans-serif
+
+
+.navbar
+    @include mixins.flex-mode
+    @include mixins.center-mode
+    width: 80%
+    max-width: 1450px
+    height: 100px
+    align-items: center
+
+    &-hb
+        display: none
+        transition: .5s
+        border-radius: 1px
+        cursor: pointer
+
+        @include mixins.mobile
+            display: flex
+
+            &-d
+                display: none
+
+    a
+        color: variables.$primary-color
+        text-decoration: none
+
+        &:hover
+            color: variables.$button-color
+    &-itens
+        @include mixins.flex-mode
+        font-weight: 500
+        align-items: center
+        list-style: none
+        height: 100%
+        
+        img
+            display: none
+
+        @include mixins.mobile
+            display: none
+            &-a
+
+
+                @include mixins.flex-mode
+                justify-content: space-evenly
+                flex-direction: column
+                font-weight: 500
+                align-items: center
+                list-style: none
+                position: fixed
+                bottom: 0
+                left: 0
+                display: flex
+                height: 100vh
+                width: 100%
+                background-color: rgba(255, 255, 255, 0.863)
+
+                img
+                    width: 35px
+                    display: flex
+                    transition: .5s
+                    border-radius: 10px
+                    cursor: pointer
+            
+                button
+                    border: none
+                    height: 10%
+                    padding: 0 1rem
+                    font-weight: bold
+                    background-color: variables.$button-color
+                    border-radius: 5px
+                    font-size: 16px
+                    transition: .4s
+                    cursor: pointer
+
+
+        li
+            margin: 0 1rem
+
+        button
+            border: none
+            height: 50%
+            padding: 0 1rem
+            font-weight: bold
+            background-color: variables.$button-color
+            border-radius: 5px
+            font-size: 16px
+            transition: .4s
+            cursor: pointer
+
+            &:hover
+                background-color: variables.$button-color-h
+
+.container
+    @include mixins.center-mode
+    width: 80%
+    max-width: 1450px
+    padding-top: 3rem
+    
+
+    &-normal
+        @include mixins.flex-mode
+        flex-wrap: wrap
+        align-items: flex-start
+        justify-content: space-between
+        width: 100%
+        margin: 5rem 0 0 0   
+
+        @include mixins.mobile
+            flex-direction: column
+
+    &-card
+        width: 320px
+        height: 500px
+        display: flex
+        flex-direction: column
+        @include mixins.padrao-card
+        margin: 1rem 0
+
+        &-img
+            width: 100%
+            height: 170px
+            cursor: pointer
+
+        &-box
+            height: 45%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            margin-top: 1rem
+
+            &-user
+                display: flex
+                align-items: center
+
+                img
+                    width: 55px
+                    margin-right: 1rem
+
+        @include mixins.mobile
+            width: 100%
+            height: 500px
+
+            h1
+                margin: 1rem 0
+                font-size: 25px
+
+            &-img
+                width: 100%
+                height: 250px
+
+            &-box
+                height: 45%
+                display: flex
+                flex-direction: column
+                justify-content: normal
+                margin: 0
+                
+                &-user
+                    margin: 1rem 0
+            
+            h1
+                margin: 1rem 0
+            
+            
+
+
+        
+
+    &-card-principal
+        @include mixins.padrao-card
+        width: 100%
+        height: 250px
+        display: flex
+        justify-content: space-between
+
+        &-img
+            width: 600px
+            height: 100%
+            cursor: pointer
+
+        &-box
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            margin-left: 5rem
+
+            &-user
+                display: flex
+                align-items: center
+
+                img
+                    width: 55px
+                    margin-right: 1rem
+
+        @include mixins.mobile
+            flex-direction: column
+            height: 500px
+
+            h1
+                margin: 1rem 0
+                font-size: 25px
+
+            &-img
+                width: 100%
+                height: 250px
+
+            &-box
+                margin: 0
+
+                &-user
+                    margin: 1rem 0
+        
+        @include mixins.mobile-2
+                
+            &-img
+                width: 100%
+                border: 10px black
+            
+
+
+#img-1
+    @include mixins.bg-set('imagem1.png')
+
+#img-2
+    @include mixins.bg-set('imagem2.png')
+
+#img-3
+    @include mixins.bg-set('imagem3.png')
+
+#img-4
+    @include mixins.bg-set('imagem4.png')
+
+footer
+    @include mixins.flex-mode
+    @include mixins.center-mode
+    width: 80%
+    max-width: 1450px
+    height: 100px
+    align-items: center
+    font-size: 100%
+
+    @include mixins.mobile
+        flex-direction: column
+        height: 100px
+        justify-content: flex-start
+        align-items: flex-start
+    
+    @include mixins.mobile-2
+        justify-content: flex-end
+        padding-bottom: 1rem

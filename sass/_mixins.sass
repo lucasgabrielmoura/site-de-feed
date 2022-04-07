@@ -1,0 +1,45 @@
+@use 'variables'
+
+@mixin padrao-card
+    p
+        color: variables.$primary-color
+
+
+    h1
+        transition: .4s
+        cursor: pointer
+        &:hover
+            color: variables.$primary-color
+
+@mixin bg-set($img)
+    background-image: url('../assets/#{$img}')
+    background-size: 150%
+    background-position: center
+    background-repeat: no-repeat
+    transition: .6s
+    border-radius: 5px
+
+
+    &:hover
+        background-size: 110%
+
+    @include mobile-2
+        background-size: 180%
+
+    
+
+@mixin center-mode
+    margin: 0 auto
+
+@mixin flex-mode
+    display: flex
+    justify-content: space-between
+
+
+@mixin mobile
+    @media (max-width: 926px)
+        @content
+
+@mixin mobile-2
+    @media (max-width: 300px)
+        @content
