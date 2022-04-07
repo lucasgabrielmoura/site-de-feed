@@ -53,7 +53,7 @@
   .navbar-itens-a {
     display: flex;
     justify-content: space-between;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
     font-weight: 500;
     align-items: center;
@@ -65,6 +65,9 @@
     height: 100vh;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.863);
+  }
+  .navbar-itens-a li {
+    padding: 2rem 0;
   }
   .navbar-itens-a img {
     width: 35px;
